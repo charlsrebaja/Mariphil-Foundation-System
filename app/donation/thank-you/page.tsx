@@ -67,7 +67,7 @@ export default function ThankYouPage() {
                   />
                 </svg>
                 <p className="text-gray-700">
-                  You'll receive a tax-deductible receipt via email
+                  You&apos;ll receive a tax-deductible receipt via email
                 </p>
               </div>
 
@@ -86,7 +86,7 @@ export default function ThankYouPage() {
                   />
                 </svg>
                 <p className="text-gray-700">
-                  We'll keep you updated on the impact of your donation
+                  We&apos;ll keep you updated on the impact of your donation
                 </p>
               </div>
 

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Mariphil Foundation Inc.',
-  description: 'Get in touch with Mariphil Foundation Inc. We\'d love to hear from you.',
+  description: 'Get in touch with Mariphil Foundation Inc. We&apos;d love to hear from you.',
 };
 
 export default function ContactPage() {
@@ -80,12 +81,12 @@ export default function ContactPage() {
               Follow us on social media or visit our other pages to learn more about our work and how you can get involved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/donate" className="btn-primary">
+              <Link href="/donate" className="btn-primary">
                 Donate Now
-              </a>
-              <a href="/projects" className="btn-secondary">
+              </Link>
+              <Link href="/projects" className="btn-secondary">
                 View Our Projects
-              </a>
+              </Link>
             </div>
           </div>
         </section>

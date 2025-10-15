@@ -5,12 +5,13 @@ import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const project = await prisma.project.findUnique({
-    where: { slug: params.slug },
+    where: { slug },
   });
 
   if (!project) {
@@ -38,7 +39,8 @@ async function getProject(slug: string) {
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
-  const project = await getProject(params.slug);
+  const { slug } = await params;
+  const project = await getProject(slug);
 
   if (!project) {
     notFound();

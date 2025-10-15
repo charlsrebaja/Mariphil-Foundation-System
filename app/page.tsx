@@ -87,21 +87,21 @@ export default async function Home() {
           <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
             <Image
               src="/images/mariphil-village.jpg"
-              alt="Mariphil Children's Village"
+              alt="Mariphil Children&apos;s Village"
               fill
               className="object-cover"
             />
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Mariphil Children's Village
+              Mariphil Children&apos;s Village
             </h2>
             <p className="text-primary font-medium mb-3">
               Purok Takway, Barangay Nanyo, Panabo, Philippines
             </p>
             <p className="text-gray-700 text-lg mb-4">
               A safe, nurturing home where children find love, care, and opportunities to thrive.
-              Our Children's Village provides comprehensive support including housing, education,
+              Our Children&apos;s Village provides comprehensive support including housing, education,
               healthcare, and emotional guidance.
             </p>
             <p className="text-gray-700 text-lg mb-6">

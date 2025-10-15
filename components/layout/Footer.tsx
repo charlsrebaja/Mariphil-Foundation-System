@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/children-village" className="text-gray-700 hover:text-primary transition-colors text-sm">
-                  Children's Village
+                  Children&apos;s Village
                 </Link>
               </li>
             </ul>

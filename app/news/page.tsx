@@ -32,7 +32,7 @@ export default async function NewsPage() {
         <div className="absolute inset-0 bg-[url('/images/hero/children-background.jpg')] bg-cover bg-center"></div>
         
         <div className="absolute bottom-0 left-0 z-20 text-white px-6 md:px-12 lg:px-16 pb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">WHAT'S NEW AT MARIPHIL?</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">WHAT&apos;S NEW AT MARIPHIL?</h1>
           <p className="text-xl">Stories of Hope and Impact</p>
         </div>
       </section>

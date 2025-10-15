@@ -76,7 +76,7 @@ export default function AboutPage() {
             </p>
             <p>
               Over the past decade, we have expanded our programs to include education support, healthcare 
-              services, children's villages, and community development initiatives. Our first Children's 
+              services, children&apos;s villages, and community development initiatives. Our first Children&apos;s
               Village opened in 2017, providing a safe and nurturing home for children in need.
             </p>
             <p>

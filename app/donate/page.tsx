@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Donate - Mariphil Foundation Inc.',
@@ -122,7 +123,7 @@ export default function DonatePage() {
               <li className="flex items-start">
                 <span className="mr-3 mt-1">•</span>
                 <p>
-                  Interested in becoming a <strong>project sponsor</strong> at MARIPHIL eV? Find more information <a href="/projects" className="underline hover:text-green-700 text-green-600">here</a>.
+                  Interested in becoming a <strong>project sponsor</strong> at MARIPHIL eV? Find more information <Link href="/projects" className="underline hover:text-green-700 text-green-600">here</Link>.
                 </p>
               </li>
               <li className="flex items-start">
@@ -131,7 +132,7 @@ export default function DonatePage() {
                   Would you like to request a <strong>donation</strong> for MARIPHIL for a special occasion?
                   Birthday, wedding, company party, housewarming, baptism... In addition to the intended purpose,
                   please include a personalized keyword for your invitation. We would be happy to share the success
-                  of your "Donations instead of flowers" campaign with you.
+                  of your &ldquo;Donations instead of flowers&rdquo; campaign with you.
                 </p>
               </li>
             </ul>
@@ -154,9 +155,9 @@ export default function DonatePage() {
             please do not hesitate to contact us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               Contact Us
-            </a>
+            </Link>
             <a href="mailto:mail@mariphil.net" className="btn-secondary">
               Email Us
             </a>
