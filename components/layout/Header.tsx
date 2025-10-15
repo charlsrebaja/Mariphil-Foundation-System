@@ -3,9 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -15,6 +17,13 @@ export default function Header() {
     { name: 'Mariphil Children\'s Village', href: '/children-village' },
     { name: 'Contact', href: '/contact' },
   ];
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50 glass-effect">
@@ -41,9 +50,16 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary font-medium transition-colors"
+                className={`font-medium transition-all duration-300 relative ${
+                  isActive(item.href)
+                    ? 'text-primary'
+                    : 'text-gray-700 hover:text-primary'
+                }`}
               >
                 {item.name}
+                {isActive(item.href) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"></span>
+                )}
               </Link>
             ))}
             <Link href="/donate" className="btn-primary">
@@ -78,7 +94,11 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-primary font-medium py-2"
+                  className={`font-medium py-2 px-3 rounded-lg transition-all duration-300 ${
+                    isActive(item.href)
+                      ? 'text-primary bg-primary/10 border-l-4 border-primary'
+                      : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

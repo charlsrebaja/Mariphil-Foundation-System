@@ -23,40 +23,28 @@ export default function AboutPage() {
         
         <div className="absolute bottom-0 left-0 z-20 text-white px-6 md:px-12 lg:px-16 pb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-xl">Transforming Lives Since 2015</p>
+          <p className="text-xl">MARIPHIL Children’s Village, “Atong Pinuy-Anan” Inc.</p>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
+      {/* Objectives & Mission Section */}
       <section className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="card p-8">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+        <div className="max-w-5xl mx-auto">
+          <div className="card p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">
+              OBJECTIVES & MISSION
+            </h2>
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+              <p>
+                We are always trying to act according to our ideals: Our main attention lies on the people in need of help. Their social, religious, and cultural background, age, gender, or skin color is of no importance to us when it comes to evaluating their need for help.
+              </p>
+              <p>
+                We are intentionally trying to set an example for peaceful collaboration, for mutual respect of all the peoples of the world, of religions and of different cultures as well as for equal gender treatment in the world. Every full-time and honorary staff member of the Children&apos;s Village has to act in accordance with the Accord of Children&apos;s Rights (Nov. 20, 1989) in their daily interaction with the children in and around the Children&apos;s Village.
+              </p>
+              <p>
+                The aim of our Children&apos;s Village is to prepare each of our fosterlings for a self-sufficient life. Depending on personal interests and talents the children are individually promoted and supported in their academic- and leisure-activities, such as school education and vocational training. Unattached to the ethnic and social origin, religious denomination, and gender they have the chance to sustain an autonomous, financially independent, and happy life for their families and themselves.
+              </p>
             </div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Mission</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              To provide hope, support, and opportunities to underprivileged children and families 
-              in the Philippines through education, healthcare, and community development programs. 
-              We strive to empower communities to break the cycle of poverty and build sustainable futures.
-            </p>
-          </div>
-
-          <div className="card p-8">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Vision</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              A Philippines where every child has access to quality education, healthcare, and 
-              opportunities to reach their full potential. We envision thriving communities where 
-              families are empowered to create lasting positive change for generations to come.
-            </p>
           </div>
         </div>
       </section>

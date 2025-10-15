@@ -5,25 +5,47 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
-  variable: '--font-poppins',
+  variable: "--font-poppins",
 });
 
 const nunitoSans = Nunito_Sans({
-  weight: ['400', '600', '700'],
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
-  variable: '--font-nunito',
+  variable: "--font-nunito",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mariphil.net'),
+  metadataBase: new URL("https://mariphil.net"),
   title: {
     default: "Mariphil Foundation Inc. - Transforming Lives in the Philippines",
-    template: "%s | Mariphil Foundation Inc."
+    template: "%s | Mariphil Foundation Inc.",
   },
-  description: "Supporting children and communities across the Philippines through education, healthcare, and community development programs. Make a difference today.",
-  keywords: ["NGO Philippines", "children's charity", "education Philippines", "healthcare programs", "community development", "Mariphil Foundation", "donate Philippines", "children's village", "Panabo charity"],
+  description:
+    "Supporting children and communities across the Philippines through education, healthcare, and community development programs. Make a difference today.",
+  icons: {
+    icon: [
+      { url: '/images/mariphil-logo.png' },
+      { url: '/images/mariphil-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/mariphil-logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/mariphil-logo.png' },
+    ],
+    shortcut: ['/images/mariphil-logo.png'],
+  },
+  keywords: [
+    "NGO Philippines",
+    "children's charity",
+    "education Philippines",
+    "healthcare programs",
+    "community development",
+    "Mariphil Foundation",
+    "donate Philippines",
+    "children's village",
+    "Panabo charity",
+  ],
   authors: [{ name: "Mariphil Foundation Inc." }],
   creator: "Mariphil Foundation Inc.",
   publisher: "Mariphil Foundation Inc.",
@@ -33,9 +55,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
@@ -44,7 +66,8 @@ export const metadata: Metadata = {
     url: "https://mariphil.net",
     siteName: "Mariphil Foundation Inc.",
     title: "Mariphil Foundation Inc. - Transforming Lives in the Philippines",
-    description: "Supporting children and communities across the Philippines through education, healthcare, and community development programs.",
+    description:
+      "Supporting children and communities across the Philippines through education, healthcare, and community development programs.",
     images: [
       {
         url: "/images/mariphil-logo.png",
@@ -77,9 +100,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunitoSans.variable} ${poppins.variable} font-sans`}>
         <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

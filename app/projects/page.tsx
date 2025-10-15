@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 async function getProjects() {
   try {
     const projects = await prisma.project.findMany({
-      orderBy: { createdAt: 'desc' },
+      orderBy: { createdAt: 'asc' },
     });
     return projects;
   } catch (error) {
@@ -36,49 +36,92 @@ export default async function ProjectsPage() {
         </div>
       </section>
 
-      {/* Projects Grid Section */}
+      {/* Introduction Section */}
       <section className="section-container">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 border border-primary/20">
+            <p className="text-gray-800 text-lg md:text-xl leading-relaxed text-center">
+              The aid project MARIPHIL Foundation Inc in the Philippines is committed to improving the economic, social and health conditions of the poor population in the project area in the Philippines in the form of various sustainable measures and projects. In doing so, it always acts in accordance with the principle of &quot;helping people to help themselves&quot;. The focus is on promoting the education of children and adults in order to enable them to escape poverty in the long term and to strengthen local structures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Alternating Section */}
+      <section className="py-16">
         {projects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <Link href={`/projects/${project.slug}`} key={project.id} className="card group">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.coverImage || 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600'}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      project.status === 'active' 
-                        ? 'bg-primary text-white' 
-                        : 'bg-gray-200 text-gray-700'
-                    }`}>
-                      {project.status === 'active' ? 'Active' : 'Completed'}
-                    </span>
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 space-y-24">
+            {projects.map((project, index) => {
+              const isEven = index % 2 === 0;
+              
+              return (
+                <div
+                  key={project.id}
+                  className={`flex flex-col ${
+                    isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  } gap-8 lg:gap-12 items-center`}
+                >
+                  {/* Image Section */}
+                  <div className="w-full lg:w-1/2">
+                    <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+                      <Image
+                        src={project.coverImage || 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800'}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      <div className="absolute top-6 right-6">
+                        <span className={`px-4 py-2 rounded-full text-sm font-semibold shadow-lg ${
+                          project.status === 'active'
+                            ? 'bg-primary text-white'
+                            : 'bg-gray-900 text-white'
+                        }`}>
+                          {project.status === 'active' ? 'Active Project' : 'Completed'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Text Section */}
+                  <div className="w-full lg:w-1/2 space-y-6">
+                    <div>
+                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        {project.title}
+                      </h2>
+                      <div className="w-20 h-1 bg-primary rounded-full mb-6"></div>
+                    </div>
+                    
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      {project.summary}
+                    </p>
+
+                    <div className="pt-4">
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                      >
+                        Learn More
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {project.summary}
-                  </p>
-                  <span className="text-primary font-medium">Learn More →</span>
-                </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         ) : (
-          <div className="text-center py-12">
-            <div className="inline-block p-8 bg-gray-50 rounded-lg">
-              <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <p className="text-gray-500 text-lg">No projects available at the moment.</p>
-              <p className="text-gray-400 mt-2">Check back soon for updates on our initiatives!</p>
+          <div className="section-container">
+            <div className="text-center py-12">
+              <div className="inline-block p-8 bg-gray-50 rounded-lg">
+                <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <p className="text-gray-500 text-lg">No projects available at the moment.</p>
+                <p className="text-gray-400 mt-2">Check back soon for updates on our initiatives!</p>
+              </div>
             </div>
           </div>
         )}
