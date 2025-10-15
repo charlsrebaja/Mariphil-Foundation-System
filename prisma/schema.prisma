@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  role         String   @default("admin")
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("users")
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  content     String   @db.Text
+  coverImage  String?
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("news")
+}
+
+model Project {
+  id         String   @id @default(cuid())
+  title      String
+  slug       String   @unique
+  summary    String
+  content    String   @db.Text
+  coverImage String?
+  status     String   @default("active")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Donation {
+  id              String   @id @default(cuid())
+  donorName       String
+  donorEmail      String
+  amount          Float
+  currency        String   @default("PHP")
+  stripePaymentId String?  @unique
+  recurring       Boolean  @default(false)
+  message         String?
+  createdAt       DateTime @default(now())
+
+  @@map("donations")
+}
+
+model Volunteer {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@map("volunteers")
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  url       String
+  altText   String?
+  createdAt DateTime @default(now())
+
+  @@map("media")
+}
