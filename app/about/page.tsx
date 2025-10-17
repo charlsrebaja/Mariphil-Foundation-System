@@ -28,7 +28,7 @@ export default function AboutPage() {
       </section>
 
       {/* Objectives & Mission Section */}
-      <section className="section-container">
+      <section id="objectives-mission" className="section-container scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="card p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">
@@ -50,8 +50,15 @@ export default function AboutPage() {
       </section>
 
       {/* History Section */}
-      <section className="bg-gray-50 section-container">
-        <div className="max-w-4xl mx-auto">
+      <section id="history" className="relative bg-gradient-to-br from-green-50 via-teal-50 to-white section-container scroll-mt-20">
+        {/* Top Wave Divider */}
+        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+          <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
+          </svg>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">
             Our History
           </h2>
@@ -75,10 +82,17 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+
+        {/* Bottom Wave Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
+          <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
+          </svg>
+        </div>
       </section>
 
       {/* Board Members Section */}
-      <section className="section-container">
+      <section id="board" className="section-container scroll-mt-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             Board of Directors

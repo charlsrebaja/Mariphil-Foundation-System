@@ -63,7 +63,7 @@ export default function DonatePage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
-              TRANSFER/STANDING ORDER
+              OUR DONATION ACCOUNT
             </h2>
           </div>
 
@@ -145,22 +145,24 @@ export default function DonatePage() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gray-50 section-container text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Questions About Donating?
-          </h2>
-          <p className="text-gray-700 text-lg mb-8">
-            If you have any questions about making a donation or need assistance, 
-            please do not hesitate to contact us.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Contact Us
-            </Link>
-            <a href="mailto:mail@mariphil.net" className="btn-secondary">
-              Email Us
-            </a>
+      <section className="bg-gradient-to-br from-primary/10 via-teal-50 to-green-50 py-20">
+        <div className="text-center px-6 md:px-12 lg:px-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Questions About Donating?
+            </h2>
+            <p className="text-gray-700 text-lg mb-8">
+              If you have any questions about making a donation or need assistance, 
+              please do not hesitate to contact us.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary">
+                Contact Us
+              </Link>
+              <a href="mailto:mail@mariphil.net" className="btn-secondary">
+                Email Us
+              </a>
+            </div>
           </div>
         </div>
       </section>

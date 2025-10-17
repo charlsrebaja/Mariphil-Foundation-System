@@ -1,6 +1,6 @@
 # Mariphil Foundation Inc. Website
 
-A full-stack NGO website built with Next.js 15, TypeScript, Tailwind CSS, Prisma, and Stripe.
+A full-stack NGO website built with Next.js 15, TypeScript, Tailwind CSS, and Prisma.
 
 ## 🚀 Features
 
@@ -11,14 +11,13 @@ A full-stack NGO website built with Next.js 15, TypeScript, Tailwind CSS, Prisma
 - ✅ **News & Updates** - Blog-style news articles with pagination support
 - ✅ **Children's Village** - Information about the residential care facility
 - ✅ **Volunteer Page** - Sign-up form for volunteers with database storage
-- ✅ **Donation Page** - Stripe-integrated donation system (one-time and recurring)
+- ✅ **Donation Page** - Bank transfer information for donations
 - ✅ **Contact Page** - Contact form with location information
 
 ### Technical Features
 - ✅ Fully responsive design with Tailwind CSS
 - ✅ SEO optimized with meta tags
 - ✅ Prisma ORM with PostgreSQL database
-- ✅ Stripe payment integration
 - ✅ SendGrid email notifications
 - ✅ Server-side rendering with Next.js 15 App ~Router
 - ✅ TypeScript for type safety
@@ -37,7 +36,6 @@ A full-stack NGO website built with Next.js 15, TypeScript, Tailwind CSS, Prisma
 
 - Node.js 18+ 
 - PostgreSQL database (or Neon DB account)
-- Stripe account
 - SendGrid account
 - Cloudinary account (for admin media upload)
 
@@ -65,11 +63,6 @@ DATABASE_URL="postgresql://username:password@host:port/database?sslmode=require"
 # NextAuth
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="generate-with: openssl rand -base64 32"
-
-# Stripe
-STRIPE_PUBLIC_KEY="pk_test_..."
-STRIPE_SECRET_KEY="sk_test_..."
-STRIPE_WEBHOOK_SECRET="whsec_..."
 
 # SendGrid
 SENDGRID_API_KEY="SG...."
@@ -123,7 +116,7 @@ mariphil-website/
 │   ├── about/                   # About page
 │   ├── api/                     # API routes
 │   │   ├── contact/            # Contact form handler
-│   │   ├── donations/          # Stripe checkout
+│   │   ├── donations/          
 │   │   ├── volunteer/          # Volunteer form handler
 │   │   └── webhooks/           # Stripe webhooks
 │   ├── children-village/       # Children's village page
@@ -164,29 +157,24 @@ The application uses the following models:
 - **User** - Admin users for authentication
 - **News** - News articles and updates
 - **Project** - Foundation projects
-- **Donation** - Donation records from Stripe
+- **Donation** - Donation records
 - **Volunteer** - Volunteer applications
 - **ContactMessage** - Contact form submissions
 - **Media** - Uploaded media files
 
-## 💳 Stripe Integration
+## 💰 Donation Information
 
-### Testing Donations
+The donation page displays bank transfer details for supporters to make contributions:
 
-Use these test card numbers:
-- Success: `4242 4242 4242 4242`
-- Decline: `4000 0000 0000 0002`
+### Bank Transfer Details
+- **IBAN**: DE11 6009 0700 0863 4900 00
+- **BIC**: SWBSDESS
+- **Bank**: Südwestbank Sigmaringen
+- **Account holder**: Hilfsprojekt MARIPHIL eV
 
-Any future expiry date and any 3-digit CVC will work.
+**Important**: Donors should include their address in the transfer reference to receive a tax-deductible donation receipt.
 
-### Webhook Setup
-
-1. Install Stripe CLI: [https://stripe.com/docs/stripe-cli](https://stripe.com/docs/stripe-cli)
-2. Forward webhooks to local server:
-```bash
-stripe listen --forward-to localhost:3000/api/webhooks/stripe
-```
-3. Copy the webhook signing secret to `.env` as `STRIPE_WEBHOOK_SECRET`
+The aid project MARIPHIL eV is recognized as a charitable organization and is entitled to issue tax-deductible donation receipts (Sigmaringen Tax Office Tax No.: 85086/14962).
 
 ## 📧 Email Configuration
 
@@ -238,13 +226,6 @@ SendGrid is used for sending emails. Make sure to:
 ### Database
 
 Use [Neon](https://neon.tech) for PostgreSQL hosting (free tier available).
-
-### Stripe Webhooks in Production
-
-Update your Stripe webhook endpoint to:
-```
-https://your-domain.com/api/webhooks/stripe
-```
 
 ## 🤝 Contributing
 

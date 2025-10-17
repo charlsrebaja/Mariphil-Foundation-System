@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Thank You - Mariphil Foundation Inc.",
   description:
-    "Thank you for your generous donation to Mariphil Foundation Inc.",
+    "Thank you for your interest in supporting Mariphil Foundation Inc.",
 };
 
 export default function ThankYouPage() {
@@ -30,12 +30,11 @@ export default function ThankYouPage() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Thank You for Your Generosity!
+            Thank You for Your Interest!
           </h1>
 
           <p className="text-lg text-gray-700 mb-6">
-            Your donation has been processed successfully. You will receive a
-            confirmation email with your receipt shortly.
+            We appreciate your willingness to support Mariphil Foundation Inc.
           </p>
 
           <div className="bg-primary/5 rounded-lg p-6 mb-8">
@@ -48,7 +47,7 @@ export default function ThankYouPage() {
 
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              What happens next?
+              How to Complete Your Donation
             </h2>
 
             <div className="text-left space-y-3">
@@ -67,7 +66,26 @@ export default function ThankYouPage() {
                   />
                 </svg>
                 <p className="text-gray-700">
-                  You&apos;ll receive a tax-deductible receipt via email
+                  Use our bank transfer details to make your donation
+                </p>
+              </div>
+
+              <div className="flex items-start">
+                <svg
+                  className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p className="text-gray-700">
+                  Include your address in the transfer reference for a tax-deductible receipt
                 </p>
               </div>
 
@@ -87,26 +105,6 @@ export default function ThankYouPage() {
                 </svg>
                 <p className="text-gray-700">
                   We&apos;ll keep you updated on the impact of your donation
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <svg
-                  className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <p className="text-gray-700">
-                  Your donation will be put to work immediately to help those in
-                  need
                 </p>
               </div>
             </div>

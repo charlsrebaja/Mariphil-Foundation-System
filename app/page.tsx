@@ -16,13 +16,118 @@ async function getLatestNews() {
   }
 }
 
+async function getFeaturedProjects() {
+  try {
+    const projects = await prisma.project.findMany({
+      take: 3,
+      orderBy: { createdAt: "asc" },
+    });
+    return projects;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return [];
+  }
+}
+
 export default async function Home() {
   const latestNews = await getLatestNews();
+  const featuredProjects = await getFeaturedProjects();
 
   return (
     <div>
       {/* Hero Carousel */}
       <HeroCarousel />
+
+      {/* Featured Projects Section */}
+      <section className="section-container">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Our Projects
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Discover how we&apos;re making a difference through sustainable development and community support
+          </p>
+        </div>
+
+        {featuredProjects.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="card group flex flex-col"
+                >
+                  <div className="relative h-64 overflow-hidden rounded-t-xl">
+                    <Image
+                      src={
+                        project.coverImage ||
+                        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600"
+                      }
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                          project.status === "active"
+                            ? "bg-primary text-white"
+                            : "bg-gray-900 text-white"
+                        }`}
+                      >
+                        {project.status === "active" ? "Active" : "Completed"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3 flex-grow">
+                      {project.summary}
+                    </p>
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+                    >
+                      Learn More
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                View All Our Projects
+              
+              </Link>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-500">
+              No projects available at the moment. Check back soon!
+            </p>
+          </div>
+        )}
+      </section>
 
       {/* Latest News Section */}
       <section className="section-container">

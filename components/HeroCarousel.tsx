@@ -41,6 +41,7 @@ const slides = [
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Removed automatic slide rotation - users control slides manually
 
@@ -57,7 +58,11 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section
+      className="relative h-screen overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -114,10 +119,13 @@ export default function HeroCarousel() {
       ))}
 
       {/* Navigation Arrows */}
-      <button
+      <motion.button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all"
         aria-label="Previous slide"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <svg
           className="w-6 h-6 text-white"
@@ -132,11 +140,14 @@ export default function HeroCarousel() {
             d="M15 19l-7-7 7-7"
           />
         </svg>
-      </button>
-      <button
+      </motion.button>
+      <motion.button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all"
         aria-label="Next slide"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <svg
           className="w-6 h-6 text-white"
@@ -151,7 +162,7 @@ export default function HeroCarousel() {
             d="M9 5l7 7-7 7"
           />
         </svg>
-      </button>
+      </motion.button>
 
       {/* Dots Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
@@ -167,6 +178,22 @@ export default function HeroCarousel() {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
+      </div>
+
+      {/* Wave Divider */}
+      <div className="absolute bottom-0 left-0 w-full z-10 pointer-events-none">
+        <svg
+          viewBox="0 0 1440 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,40 C240,80 480,80 720,40 C960,0 1200,0 1440,40 L1440,100 L0,100 Z"
+            fill="white"
+          />
+        </svg>
       </div>
     </section>
   );

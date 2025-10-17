@@ -1,14 +1,43 @@
-import type { Metadata } from "next";
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Mariphil Children&apos;s Village - Mariphil Foundation Inc.",
-  description:
-    "A safe and nurturing home for children in need. Learn about our Children&apos;s Village program and how we provide care, education, and hope.",
-};
+import { useState } from "react";
 
 export default function ChildrenVillagePage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
+  // Gallery images organized by page
+  const galleryPages: Record<number, string[]> = {
+    1: [
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400",
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400",
+      "https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=400",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400",
+    ],
+    2: [
+      "https://images.unsplash.com/photo-1587691592099-24045742c181?w=400",
+      "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=400",
+      "https://images.unsplash.com/photo-1560785496-3c9d27877182?w=400",
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400",
+    ],
+    3: [
+      "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=400",
+      "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=400",
+      "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=400",
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400",
+    ],
+    4: [
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400",
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400",
+      "https://images.unsplash.com/photo-1503919005314-30d93d07d823?w=400",
+      "https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=400",
+    ],
+  };
+
+  const currentImages = galleryPages[currentPage] || galleryPages[1];
+
   return (
     <div>
       {/* Hero Section */}
@@ -17,7 +46,7 @@ export default function ChildrenVillagePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/children-village.jpg"
-            alt="Mariphil Children&apos;s Village"
+            alt="Mariphil Children's Village"
             fill
             className="object-cover"
           />
@@ -38,284 +67,195 @@ export default function ChildrenVillagePage() {
       <section className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              A Home for Every Child
-            </h2>
             <p className="text-gray-700 text-lg mb-4">
-              The Mariphil Children&apos;s Village provides a safe, nurturing
-              environment for children who have faced adversity. Our facility
-              offers comprehensive care including housing, education,
-              healthcare, and emotional support.
+              The MARIPHIL Children&apos;s Village &quot;Atong Pinuy-Anan&quot; Inc. (in German: Our Home) is a community project. Created in cooperation with the German association &quot;Hilfsprojekt MARIPHIL e.V.&quot;, the Philippine association &quot;Project MARIPHIL Foundation Inc.&quot;, the city of Panabo and the German Federal Ministry for Economic Cooperation and Development (BMZ).
             </p>
             <p className="text-gray-700 text-lg mb-4">
-              Each child receives individualized attention and care from our
-              dedicated staff and house parents who work tirelessly to create a
-              family-like atmosphere where children can heal, grow, and discover
-              their potential.
+              We are a non-profit organization recognized under Philippine law and accredited by the Department of Social Welfare and Development (DSWD), which was put into operation in January 2012 after several years of preparation and planning.
             </p>
             <p className="text-gray-700 text-lg">
-              We believe every child deserves a chance at a bright future, and
-              our village provides the foundation for that journey.
+              The Children&apos;s Village can now look back on many years of experience in actively helping disadvantaged children. However, our greatest success is repeated every day. That our children in the Children&apos;s Village can lead a carefree life after bad past years, play, laugh and be alive.
             </p>
           </div>
-          <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-            <Image
-              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800"
-              alt="Children&apos;s Village"
-              fill
-              className="object-cover"
-            />
+          <div>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 text-center tracking-wide">
+              "WE GIVE CHILDREN A FUTURE!"
+            </h3>
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/s36Ko0HtrcQ"
+                title="MARIPHIL Children's Village Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Facilities Section */}
-      <section className="bg-gray-50 section-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Our Facilities
+      {/* Target Group Section */}
+      <section className="section-container">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
+            Target group
           </h2>
-          <p className="text-gray-600 text-lg">
-            Everything a child needs to feel safe, loved, and supported
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our target group are children who no longer have parents or whose parents cannot ensure the child&apos;s best interests. The Children&apos;s Village thus cares for orphaned and abandoned children as well as children who have been victims of neglect, abuse and sexual abuse in their family of origin. Many flee from family violence onto the streets and try to survive there. They try to keep their heads above water with begging, stealing, prostitution and minimally paid work. Many consume cheap drugs such as gasoline and glue to make life more bearable. They are exposed to violent attacks without protection. Street children have been abandoned by their families and society, and do not receive any care, protection or attention.
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Residential Units",
-              description:
-                "Comfortable, home-like living spaces with dedicated house parents",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              ),
-            },
-            {
-              title: "Learning Center",
-              description:
-                "Fully-equipped classrooms and library for education support",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                />
-              ),
-            },
-            {
-              title: "Healthcare Clinic",
-              description: "On-site medical care and regular health monitoring",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              ),
-            },
-            {
-              title: "Recreation Areas",
-              description:
-                "Playgrounds and sports facilities for physical activities",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              ),
-            },
-            {
-              title: "Dining Hall",
-              description:
-                "Nutritious meals prepared daily in our community kitchen",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              ),
-            },
-            {
-              title: "Counseling Rooms",
-              description: "Professional psychological support and guidance",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                />
-              ),
-            },
-          ].map((facility, index) => (
-            <div key={index} className="card p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  className="w-6 h-6 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  {facility.icon}
+      {/* Guidelines and Principles Section */}
+      <section className="bg-gray-50 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Guidelines and Principles
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Principle 1 */}
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">
+                We always see the person in need of help in the foreground
+              </h3>
+              <p className="text-gray-700 text-base leading-relaxed">
+                His social, religious, cultural background, age, gender or even skin color is not a criterion for us to assess his need for help.
+              </p>
+            </div>
+
+            {/* Principle 2 */}
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">
+                We trust and are trustworthy
+              </h3>
+              <p className="text-gray-700 text-base leading-relaxed">
+                All our actions are accompanied by optimism, confidence and trust, and at the same time we are a trustworthy, transparent organization for our partners.
+              </p>
+            </div>
+
+            {/* Principle 3 */}
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">
+                Living and promoting respect
+              </h3>
+              <p className="text-gray-700 text-base leading-relaxed">
+                We respect the UN rights of children and human rights and accept every child and every employee of the Children&apos;s Village regardless of gender, age, religion, sexual orientation, etc. in their individuality and diversity.
+              </p>
+            </div>
+
+            {/* Principle 4 */}
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">
+                Together we are effective
+              </h3>
+              <p className="text-gray-700 text-base leading-relaxed">
+                One person achieves a lot – together we achieve everything. Therefore, we see ourselves as an open, community-oriented organization that can only function through the valued cooperation of many supporters.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="section-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          {currentImages.map((img, index) => (
+            <div 
+              key={index} 
+              className="relative h-56 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer group"
+              onClick={() => setSelectedImage(img)}
+            >
+              <Image
+                src={img}
+                alt={`Children's Village Gallery ${index + 1}`}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              {/* Hover Overlay with + Icon */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {facility.title}
-              </h3>
-              <p className="text-gray-600">{facility.description}</p>
             </div>
           ))}
         </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="section-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            How It Works
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Our comprehensive approach to child care and development
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {[
-            {
-              step: "1",
-              title: "Admission",
-              description:
-                "Children are referred by social services or community partners",
-            },
-            {
-              step: "2",
-              title: "Assessment",
-              description:
-                "Individual needs assessment and care plan development",
-            },
-            {
-              step: "3",
-              title: "Care & Education",
-              description:
-                "Comprehensive support including housing, education, and healthcare",
-            },
-            {
-              step: "4",
-              title: "Reintegration",
-              description:
-                "Preparation for independent living or family reunification",
-            },
-          ].map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                {item.step}
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {item.title}
-              </h3>
-              <p className="text-gray-600">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Success Stories Section */}
-      <section className="bg-gray-50 section-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Success Stories
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Lives transformed through love, care, and opportunity
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Miguel, Age 16",
-              story:
-                "Arrived at 12, now excelling in school and dreams of becoming a teacher to help other children.",
-              image:
-                "https://static.vecteezy.com/system/resources/previews/029/271/062/non_2x/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg",
-            },
-            {
-              name: "Maria, Age 14",
-              story:
-                "Found safety and support at the village. Now a confident student and leader among her peers.",
-              image:
-                "https://static.vecteezy.com/system/resources/previews/029/271/062/non_2x/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg",
-            },
-            {
-              name: "Juan, Age 15",
-              story:
-                "Overcame early challenges to discover his passion for art. Recently won a regional art competition.",
-              image:
-                "https://static.vecteezy.com/system/resources/previews/029/271/062/non_2x/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg",
-            },
-          ].map((story, index) => (
-            <div key={index} className="card">
-              <div className="relative h-64">
-                <Image
-                  src={story.image}
-                  alt={story.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  {story.name}
-                </h3>
-                <p className="text-gray-600 italic">&ldquo;{story.story}&rdquo;</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Staff Section */}
-      <section className="section-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Our Dedicated Staff
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Trained professionals committed to child welfare
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            "House Parents",
-            "Social Workers",
-            "Teachers",
-            "Healthcare Staff",
-            "Counselors",
-            "Nutritionists",
-            "Recreation Coordinators",
-            "Administrative Staff",
-          ].map((role, index) => (
-            <div
-              key={index}
-              className="bg-primary/5 rounded-lg p-6 text-center"
+        
+        {/* Pagination */}
+        <div className="flex justify-center items-center gap-3 mt-8">
+          {[1, 2, 3, 4].map((page) => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className={`w-10 h-10 rounded-full font-semibold transition-colors ${
+                currentPage === page
+                  ? 'bg-primary text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
             >
-              <p className="text-gray-900 font-semibold">{role}</p>
-            </div>
+              {page}
+            </button>
           ))}
+          <span className="text-gray-600 font-medium ml-2">FURTHER</span>
         </div>
       </section>
+
+      {/* Quote Section */}
+      <section className="relative bg-gradient-to-br from-primary/10 to-primary/5">
+        {/* Top Wave Divider */}
+        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+          <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
+          </svg>
+        </div>
+
+        <div className="relative py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <svg className="w-12 h-12 text-primary mx-auto mb-4 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+          <p className="text-2xl md:text-3xl font-serif italic text-gray-800 mb-4">
+            &ldquo;Every child is a different kind of flower, and all together make this world a beautiful garden.&rdquo;
+          </p>
+        </div>
+
+        {/* Bottom Wave Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
+          <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white opacity-10"></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-6xl max-h-[90vh] w-full h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors z-10"
+              aria-label="Close modal"
+            >
+              <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative w-full h-full">
+              <Image
+                src={selectedImage}
+                alt="Gallery Image"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA Section */}
       <section className="bg-primary/5 section-container text-center">

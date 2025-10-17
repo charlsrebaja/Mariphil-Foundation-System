@@ -25,7 +25,55 @@ async function main() {
   // Create sample projects
   const project1 = await prisma.project.upsert({
     where: { slug: 'mariphil-childrens-village' },
-    update: {},
+    update: {
+      content: `
+# MARIPHIL Children's Village
+
+The MARIPHIL Children's Village "Atong Pinuy-Anan" Inc. (in German: Our Home) is a community project. Created in cooperation with the German association "Hilfsprojekt MARIPHIL e.V.", the Philippine association "Project MARIPHIL Foundation Inc.", the city of Panabo and the German Federal Ministry for Economic Cooperation and Development (BMZ).
+
+We are a non-profit organization recognized under Philippine law and accredited by the Department of Social Welfare and Development (DSWD), which was put into operation in January 2012 after several years of preparation and planning.
+
+The Children's Village can now look back on many years of experience in actively helping disadvantaged children. However, our greatest success is repeated every day. That our children in the Children's Village can lead a carefree life after bad past years, play, laugh and be alive.
+
+## Our Mission
+
+The MARIPHIL Children's Village provides a nurturing home environment for children who have been abandoned by their parents and society. We offer them more than just shelter - we provide a loving family atmosphere where they can heal, grow, and develop into self-sufficient individuals.
+
+## What We Provide
+
+### A Loving Home
+- Safe and secure residential facilities
+- Family-style living arrangements
+- 24/7 care and supervision
+- Emotional support and counseling
+
+### Quality Education
+- Access to quality schools and educational resources
+- Tutoring and academic support
+- Vocational training programs
+- Scholarship opportunities for higher education
+
+### Holistic Development
+- Life skills training
+- Character development programs
+- Sports and recreational activities
+- Cultural and artistic pursuits
+
+### Path to Independence
+- Career guidance and counseling
+- Job placement assistance
+- Financial literacy training
+- Continued support during transition to independent living
+
+## Our Impact
+
+Since our establishment, we have provided a home for hundreds of children, helping them overcome adversity and build successful futures. Many of our former residents have gone on to become successful professionals, contributing positively to their communities.
+
+## How You Can Help
+
+Your support enables us to continue providing a loving home and bright future for abandoned children. Every donation helps us maintain our facilities, provide quality education, and offer comprehensive care to children in need.
+      `.trim(),
+    },
     create: {
       title: "MARIPHIL Children's Village",
       slug: 'mariphil-childrens-village',
@@ -33,7 +81,11 @@ async function main() {
       content: `
 # MARIPHIL Children's Village
 
-A safe haven where abandoned children and young people find hope, love, and opportunities for a better future.
+The MARIPHIL Children's Village "Atong Pinuy-Anan" Inc. (in German: Our Home) is a community project. Created in cooperation with the German association "Hilfsprojekt MARIPHIL e.V.", the Philippine association "Project MARIPHIL Foundation Inc.", the city of Panabo and the German Federal Ministry for Economic Cooperation and Development (BMZ).
+
+We are a non-profit organization recognized under Philippine law and accredited by the Department of Social Welfare and Development (DSWD), which was put into operation in January 2012 after several years of preparation and planning.
+
+The Children's Village can now look back on many years of experience in actively helping disadvantaged children. However, our greatest success is repeated every day. That our children in the Children's Village can lead a carefree life after bad past years, play, laugh and be alive.
 
 ## Our Mission
 

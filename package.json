@@ -16,7 +16,6 @@
     "typescript": "^5.7.3",
     "@prisma/client": "^6.3.0",
     "next-auth": "^4.24.10",
-    "stripe": "^18.5.0",
     "@sendgrid/mail": "^8.1.5",
     "cloudinary": "^2.6.1",
     "react-hook-form": "^7.55.2",
