@@ -68,7 +68,7 @@ export default function ChildrenVillagePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-gray-700 text-lg mb-4">
-              The MARIPHIL Children&apos;s Village &quot;Atong Pinuy-Anan&quot; Inc. (in German: Our Home) is a community project. Created in cooperation with the German association &quot;Hilfsprojekt MARIPHIL e.V.&quot;, the Philippine association &quot;Project MARIPHIL Foundation Inc.&quot;, the city of Panabo and the German Federal Ministry for Economic Cooperation and Development (BMZ).
+              The MARIPHIL Children&apos;s Village &ldquo;Atong Pinuy-Anan&rdquo; Inc. (in German: Our Home) is a community project. Created in cooperation with the German association &ldquo;Hilfsprojekt MARIPHIL e.V.&rdquo;, the Philippine association &ldquo;Project MARIPHIL Foundation Inc.&rdquo;, the city of Panabo and the German Federal Ministry for Economic Cooperation and Development (BMZ).
             </p>
             <p className="text-gray-700 text-lg mb-4">
               We are a non-profit organization recognized under Philippine law and accredited by the Department of Social Welfare and Development (DSWD), which was put into operation in January 2012 after several years of preparation and planning.
@@ -79,7 +79,7 @@ export default function ChildrenVillagePage() {
           </div>
           <div>
             <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 text-center tracking-wide">
-              "WE GIVE CHILDREN A FUTURE!"
+              &ldquo;WE GIVE CHILDREN A FUTURE!&rdquo;
             </h3>
             <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl">
               <iframe

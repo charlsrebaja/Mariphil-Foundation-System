@@ -103,7 +103,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     the most gentle management possible and with the involvement
                     of the local population, we would like to generate permanent
                     income for the MARIPHIL projects on site, such as the
-                    children's village and the school, health or social
+                    children&apos;s village and the school, health or social
                     projects. An equal goal is the fight against climate change.
                     We also strive for recognition for the sale of CO²
                     certificates, which is associated with strict criteria. With
@@ -295,48 +295,49 @@ export default async function ProjectDetailPage({ params }: Props) {
 
                 {/* Sustainability Mission Statement */}
                 <div className="bg-gradient-to-br from-teal-400 via-[#4DB8B8] to-teal-500 -mx-4 sm:-mx-6 lg:-mx-8 py-12 sm:py-16 px-6 sm:px-12 lg:px-16 my-12">
-                    <div className="max-w-6xl mx-auto text-center">
-                      <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed font-light">
-                        WITH THEIR SUPPORT, MARIPHIL HAS STARTED A MAJOR PROJECT
-                        WITH "100,000 TREES AGAINST CLIMATE CHANGE", WHICH
-                        ENABLES US TO TAKE INTO ACCOUNT THE THREE DIMENSIONS OF{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          SUSTAINABILITY
-                        </span>{" "}
-                        IN OUR WORK ON SITE:{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          SOCIAL, ENVIRONMENTAL
-                        </span>{" "}
-                        AND{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          ECONOMIC.
-                        </span>{" "}
-                        BECAUSE ONLY WITH A HOLISTIC AND RESPONSIBLE APPROACH
-                        CAN WE ACHIEVE LONG-TERM{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          CHANGES
-                        </span>
-                        , CHANGE{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          SOCIETY
-                        </span>{" "}
-                        SUSTAINABLY FROM BELOW AND FINALLY EFFECTIVELY BREAK THE
-                        CYCLE OF POVERTY. OF COURSE, THE GLOBAL CHALLENGES
-                        CANNOT BE{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          SOLVED
-                        </span>{" "}
-                        FROM ONE DAY TO THE NEXT, BUT WE ARE SURE – WHETHER
-                        INDIVIDUAL, ORGANIZATION OR STATE –{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          EVERYONE CAN
-                        </span>{" "}
-                        CONTRIBUTE A SMALL{" "}
-                        <span className="font-bold text-base md:text-lg">
-                          PART.
-                        </span>
-                      </p>
-                    </div>
+                  <div className="max-w-6xl mx-auto text-center">
+                    <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed font-light">
+                      WITH THEIR SUPPORT, MARIPHIL HAS STARTED A MAJOR PROJECT
+                      WITH &ldquo;100,000 TREES AGAINST CLIMATE CHANGE&rdquo;,
+                      WHICH ENABLES US TO TAKE INTO ACCOUNT THE THREE DIMENSIONS
+                      OF{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        SUSTAINABILITY
+                      </span>{" "}
+                      IN OUR WORK ON SITE:{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        SOCIAL, ENVIRONMENTAL
+                      </span>{" "}
+                      AND{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        ECONOMIC.
+                      </span>{" "}
+                      BECAUSE ONLY WITH A HOLISTIC AND RESPONSIBLE APPROACH CAN
+                      WE ACHIEVE LONG-TERM{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        CHANGES
+                      </span>
+                      , CHANGE{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        SOCIETY
+                      </span>{" "}
+                      SUSTAINABLY FROM BELOW AND FINALLY EFFECTIVELY BREAK THE
+                      CYCLE OF POVERTY. OF COURSE, THE GLOBAL CHALLENGES CANNOT
+                      BE{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        SOLVED
+                      </span>{" "}
+                      FROM ONE DAY TO THE NEXT, BUT WE ARE SURE – WHETHER
+                      INDIVIDUAL, ORGANIZATION OR STATE –{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        EVERYONE CAN
+                      </span>{" "}
+                      CONTRIBUTE A SMALL{" "}
+                      <span className="font-bold text-base md:text-lg">
+                        PART.
+                      </span>
+                    </p>
+                  </div>
                 </div>
                 {/* Plant With Us - Support Section */}
                 <div className="py-12">
@@ -354,7 +355,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                           contribution by making a donation to our donation
                           account with the keyword{" "}
                           <strong>
-                            &quot;100,000 trees against climate change&quot;
+                            &ldquo;100,000 trees against climate change&rdquo;
                           </strong>
                           . The contact person for the land project is Martin
                           Riester.
@@ -362,12 +363,12 @@ export default async function ProjectDetailPage({ params }: Props) {
 
                         <p>
                           From one hectare of donated land, there is the
-                          possibility to give &quot;your country&quot; your own
-                          name. In addition, we welcome all donors to take their
-                          own look at the project. For those who do not want to
-                          fly to the Philippines, there are of course regular
-                          updates and impressions of the developments in the
-                          MARIPHIL countries.
+                          possibility to give &ldquo;your country&rdquo; your
+                          own name. In addition, we welcome all donors to take
+                          their own look at the project. For those who do not
+                          want to fly to the Philippines, there are of course
+                          regular updates and impressions of the developments in
+                          the MARIPHIL countries.
                         </p>
                       </div>
                     </div>
@@ -444,7 +445,9 @@ export default async function ProjectDetailPage({ params }: Props) {
                 {/* Introduction Text */}
                 <div className="prose max-w-none mx-auto">
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    We offer different forms of sponsorship for our supporters. Through the regular support on your part, you place great trust in us.
+                    We offer different forms of sponsorship for our supporters.
+                    Through the regular support on your part, you place great
+                    trust in us.
                   </p>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -452,7 +455,11 @@ export default async function ProjectDetailPage({ params }: Props) {
                   </p>
 
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    Sponsorships can also be a wonderful and very meaningful gift for your loved ones. They are also ideal for providing valuable help when several people join forces. See the sponsorship as a community project within your family, your circle of friends, your department or your association, etc.
+                    Sponsorships can also be a wonderful and very meaningful
+                    gift for your loved ones. They are also ideal for providing
+                    valuable help when several people join forces. See the
+                    sponsorship as a community project within your family, your
+                    circle of friends, your department or your association, etc.
                   </p>
                 </div>
 
@@ -593,32 +600,69 @@ export default async function ProjectDetailPage({ params }: Props) {
                     <details className="group bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-primary/40 transition-all">
                       <summary className="cursor-pointer p-6 font-bold text-lg text-gray-900 hover:text-primary transition-colors list-none flex justify-between items-center uppercase">
                         Cost
-                        <svg className="w-6 h-6 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <svg
+                          className="w-6 h-6 text-primary group-open:rotate-180 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 4v16m8-8H4"
+                          />
                         </svg>
                       </summary>
                       <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                        <p>School sponsorship costs information will be displayed here.</p>
+                        <p>
+                          School sponsorship costs information will be displayed
+                          here.
+                        </p>
                       </div>
                     </details>
 
                     <details className="group bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-primary/40 transition-all">
                       <summary className="cursor-pointer p-6 font-bold text-lg text-gray-900 hover:text-primary transition-colors list-none flex justify-between items-center uppercase">
                         We operate according to the principle of solidarity
-                        <svg className="w-6 h-6 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <svg
+                          className="w-6 h-6 text-primary group-open:rotate-180 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 4v16m8-8H4"
+                          />
                         </svg>
                       </summary>
                       <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                        <p>Information about the solidarity principle will be displayed here.</p>
+                        <p>
+                          Information about the solidarity principle will be
+                          displayed here.
+                        </p>
                       </div>
                     </details>
 
                     <details className="group bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-primary/40 transition-all">
                       <summary className="cursor-pointer p-6 font-bold text-lg text-gray-900 hover:text-primary transition-colors list-none flex justify-between items-center uppercase">
-                        What requirements do we place on the parents/children we support in the Philippines?
-                        <svg className="w-6 h-6 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        What requirements do we place on the parents/children we
+                        support in the Philippines?
+                        <svg
+                          className="w-6 h-6 text-primary group-open:rotate-180 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 4v16m8-8H4"
+                          />
                         </svg>
                       </summary>
                       <div className="px-6 pb-6 text-gray-700 leading-relaxed">
@@ -629,8 +673,18 @@ export default async function ProjectDetailPage({ params }: Props) {
                     <details className="group bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-primary/40 transition-all">
                       <summary className="cursor-pointer p-6 font-bold text-lg text-gray-900 hover:text-primary transition-colors list-none flex justify-between items-center uppercase">
                         What services do the supported children receive?
-                        <svg className="w-6 h-6 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <svg
+                          className="w-6 h-6 text-primary group-open:rotate-180 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 4v16m8-8H4"
+                          />
                         </svg>
                       </summary>
                       <div className="px-6 pb-6 text-gray-700 leading-relaxed">
@@ -641,12 +695,25 @@ export default async function ProjectDetailPage({ params }: Props) {
                     <details className="group bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-primary/40 transition-all">
                       <summary className="cursor-pointer p-6 font-bold text-lg text-gray-900 hover:text-primary transition-colors list-none flex justify-between items-center uppercase">
                         Cost development and controlling
-                        <svg className="w-6 h-6 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <svg
+                          className="w-6 h-6 text-primary group-open:rotate-180 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 4v16m8-8H4"
+                          />
                         </svg>
                       </summary>
                       <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                        <p>Cost development and controlling information will be displayed here.</p>
+                        <p>
+                          Cost development and controlling information will be
+                          displayed here.
+                        </p>
                       </div>
                     </details>
                   </div>
@@ -660,7 +727,14 @@ export default async function ProjectDetailPage({ params }: Props) {
                 {/* Introduction Section */}
                 <div className="prose max-w-none mx-auto">
                   <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                    There is usually more than enough water in a tropical country like the Philippines. But when it comes to clean drinking water, the situation is completely different. In the project area of the MARIPHIL aid project, the vast majority of people lack direct access to really clean drinking water. Many people have no choice, filter the rainwater or use the mostly germ-contaminated water from wells they have built themselves.
+                    There is usually more than enough water in a tropical
+                    country like the Philippines. But when it comes to clean
+                    drinking water, the situation is completely different. In
+                    the project area of the MARIPHIL aid project, the vast
+                    majority of people lack direct access to really clean
+                    drinking water. Many people have no choice, filter the
+                    rainwater or use the mostly germ-contaminated water from
+                    wells they have built themselves.
                   </p>
 
                   {/* Not All Water Is The Same */}
@@ -674,11 +748,19 @@ export default async function ProjectDetailPage({ params }: Props) {
                   </div>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    The people with some income buy water in disposable bottles, get it in reusable containers from the many water treatment plants on site or get the water from the local suppliers on site, which is often not really germ-free.
+                    The people with some income buy water in disposable bottles,
+                    get it in reusable containers from the many water treatment
+                    plants on site or get the water from the local suppliers on
+                    site, which is often not really germ-free.
                   </p>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-12">
-                    Therefore, many people, especially the poor population in the Philippines and especially young children, are at high risk of contracting gastrointestinal diseases of any kind. Unfortunately, often with fatal consequences, as these families often do not have sufficient access to medical care even with such an illness.
+                    Therefore, many people, especially the poor population in
+                    the Philippines and especially young children, are at high
+                    risk of contracting gastrointestinal diseases of any kind.
+                    Unfortunately, often with fatal consequences, as these
+                    families often do not have sufficient access to medical care
+                    even with such an illness.
                   </p>
                 </div>
 
@@ -696,15 +778,35 @@ export default async function ProjectDetailPage({ params }: Props) {
                 {/* MARIPHIL Opens Water Treatment Plant Section */}
                 <div className="prose max-w-none mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
-                    MARIPHIL opens<br />water treatment plant
+                    MARIPHIL opens
+                    <br />
+                    water treatment plant
                   </h2>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    This circumstance has encouraged the association of the three MARIPHIL organisations MARIPHIL Switzerland, MARIPHIL Nord e.V. and MARIPHIL e.V. to jointly launch and finance a sustainable water project. The construction of a so-called "Water refilling station" (water purification with the help of the so-called "osmosis – reversal process") was planned and implemented, mainly by MARIPHIL Switzerland and board member Isabel Riester of MARIPHIL e.V. from Gutenstein as project manager on site.
+                    This circumstance has encouraged the association of the
+                    three MARIPHIL organisations MARIPHIL Switzerland, MARIPHIL
+                    Nord e.V. and MARIPHIL e.V. to jointly launch and finance a
+                    sustainable water project. The construction of a so-called
+                    &ldquo;Water refilling station&rdquo; (water purification
+                    with the help of the so-called &ldquo;osmosis – reversal
+                    process&rdquo;) was planned and implemented, mainly by
+                    MARIPHIL Switzerland and board member Isabel Riester of
+                    MARIPHIL e.V. from Gutenstein as project manager on site.
                   </p>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    Construction began in October 2022 after almost 2 years of preparation and planning, and was completed in April 2023 after overcoming countless bureaucratic obstacles. Now that the operating license has been obtained and all other necessary papers have been approved, the facility was officially opened on 15.05.2023. "The fact that this project was largely implemented within the planned budget and to a high standard shows the quality of the practical implementation in an environment characterized by inflation," says Martin Riester, board member of MARIPHIL e.V.
+                    Construction began in October 2022 after almost 2 years of
+                    preparation and planning, and was completed in April 2023
+                    after overcoming countless bureaucratic obstacles. Now that
+                    the operating license has been obtained and all other
+                    necessary papers have been approved, the facility was
+                    officially opened on 15.05.2023. &ldquo;The fact that this
+                    project was largely implemented within the planned budget
+                    and to a high standard shows the quality of the practical
+                    implementation in an environment characterized by
+                    inflation,&rdquo; says Martin Riester, board member of
+                    MARIPHIL e.V.
                   </p>
                 </div>
 
@@ -715,7 +817,19 @@ export default async function ProjectDetailPage({ params }: Props) {
                   </h2>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    The goals of this project are, on the one hand, to supply the MARIPHIL projects on site such as the Children's Village with clean drinking water and thus reduce operating costs. But also to generate income with the project despite fair water prices for the people, which then flows directly to the projects of MARIPHIL in the Philippines. At the same time, we also create fairly paid jobs locally. The fact that Jovelyn Dahang, a young lady who has been built up over 14 years through a sponsorship from primary school to the completion of her studies, is now taking over the responsibility for this project also shows the long-term effect of MARIPHIL's work. This is where we come full circle," says Martin Riester.
+                    The goals of this project are, on the one hand, to supply
+                    the MARIPHIL projects on site such as the Children&apos;s
+                    Village with clean drinking water and thus reduce operating
+                    costs. But also to generate income with the project despite
+                    fair water prices for the people, which then flows directly
+                    to the projects of MARIPHIL in the Philippines. At the same
+                    time, we also create fairly paid jobs locally. The fact that
+                    Jovelyn Dahang, a young lady who has been built up over 14
+                    years through a sponsorship from primary school to the
+                    completion of her studies, is now taking over the
+                    responsibility for this project also shows the long-term
+                    effect of MARIPHIL&apos;s work. This is where we come full
+                    circle,&rdquo; says Martin Riester.
                   </p>
                 </div>
               </div>
@@ -726,15 +840,26 @@ export default async function ProjectDetailPage({ params }: Props) {
                 {/* Introduction Section */}
                 <div className="prose max-w-none mx-auto">
                   <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                    Being insured in the event of illness or accident is almost a matter of course for us in Europe. Anyone who is unemployed, old or permanently ill is taken care of in the solidarity-based system of statutory health insurance as part of our stable social network. Through medical care, diseases are detected at an early stage and can be treated effectively.
+                    Being insured in the event of illness or accident is almost
+                    a matter of course for us in Europe. Anyone who is
+                    unemployed, old or permanently ill is taken care of in the
+                    solidarity-based system of statutory health insurance as
+                    part of our stable social network. Through medical care,
+                    diseases are detected at an early stage and can be treated
+                    effectively.
                   </p>
 
                   <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
-                    In the Philippines, however, it's completely different!
+                    In the Philippines, however, it&apos;s completely different!
                   </h2>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-12">
-                    The majority of families have poor access to medical care and have to pay for medication and treatment out of their own pockets. Social health insurance only covers employees in the regular labour market – but the absolute majority of people work in the informal sector and therefore do not have health insurance.
+                    The majority of families have poor access to medical care
+                    and have to pay for medication and treatment out of their
+                    own pockets. Social health insurance only covers employees
+                    in the regular labour market – but the absolute majority of
+                    people work in the informal sector and therefore do not have
+                    health insurance.
                   </p>
                 </div>
 
@@ -759,15 +884,23 @@ export default async function ProjectDetailPage({ params }: Props) {
                     </h2>
 
                     <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                      Finance a simple health insurance for a Filipino family with only 7 euros a month!
+                      Finance a simple health insurance for a Filipino family
+                      with only 7 euros a month!
                     </p>
 
                     <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                      For us, a cup of coffee and a piece of cake – but for the affected families, it is a valuable insurance in the event of illness or accident that saves lives
+                      For us, a cup of coffee and a piece of cake – but for the
+                      affected families, it is a valuable insurance in the event
+                      of illness or accident that saves lives
                     </p>
 
                     <p className="text-gray-700 text-lg leading-relaxed">
-                      If you would like to take on such a sponsorship, simply place a standing order on our account. Please also be sure to provide us with your complete address (e.g. by e-mail) so that we can issue an annual donation receipt. Here we recommend a semi-annual (42 €) or annual standing order (84 €) to reduce the administrative burden.
+                      If you would like to take on such a sponsorship, simply
+                      place a standing order on our account. Please also be sure
+                      to provide us with your complete address (e.g. by e-mail)
+                      so that we can issue an annual donation receipt. Here we
+                      recommend a semi-annual (42 €) or annual standing order
+                      (84 €) to reduce the administrative burden.
                     </p>
                   </div>
                 </div>
@@ -817,30 +950,48 @@ export default async function ProjectDetailPage({ params }: Props) {
                     {[
                       {
                         question: "How does the health insurance work?",
-                        answer: "The health insurance provides coverage for Filipino families working in the informal sector who don't have access to social health insurance. It covers basic medical care, medication, and emergency treatments."
+                        answer:
+                          "The health insurance provides coverage for Filipino families working in the informal sector who don&apos;t have access to social health insurance. It covers basic medical care, medication, and emergency treatments.",
                       },
                       {
                         question: "How much does it cost to sponsor a family?",
-                        answer: "With just 7 euros per month, you can provide health insurance coverage for an entire Filipino family. We recommend semi-annual (42€) or annual (84€) standing orders to reduce administrative costs."
+                        answer:
+                          "With just 7 euros per month, you can provide health insurance coverage for an entire Filipino family. We recommend semi-annual (42€) or annual (84€) standing orders to reduce administrative costs.",
                       },
                       {
                         question: "What does the insurance cover?",
-                        answer: "The insurance covers essential medical services including doctor visits, medication, emergency care, and treatment for illnesses and accidents that would otherwise be unaffordable for families in the informal sector."
+                        answer:
+                          "The insurance covers essential medical services including doctor visits, medication, emergency care, and treatment for illnesses and accidents that would otherwise be unaffordable for families in the informal sector.",
                       },
                       {
                         question: "How do I set up a sponsorship?",
-                        answer: "Simply set up a standing order to our account using the keyword 'health insurance'. Please provide your complete address via email so we can issue an annual donation receipt."
+                        answer:
+                          "Simply set up a standing order to our account using the keyword 'health insurance'. Please provide your complete address via email so we can issue an annual donation receipt.",
                       },
                       {
                         question: "Is my donation tax-deductible?",
-                        answer: "Yes, all donations to MARIPHIL e.V. are tax-deductible. We will provide you with an annual donation receipt for your tax records."
-                      }
+                        answer:
+                          "Yes, all donations to MARIPHIL e.V. are tax-deductible. We will provide you with an annual donation receipt for your tax records.",
+                      },
                     ].map((faq, index) => (
-                      <details key={index} className="group bg-white rounded-lg shadow-md border-2 border-gray-200 hover:border-primary/40 transition-all">
+                      <details
+                        key={index}
+                        className="group bg-white rounded-lg shadow-md border-2 border-gray-200 hover:border-primary/40 transition-all"
+                      >
                         <summary className="cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-primary transition-colors list-none flex justify-between items-center">
                           {faq.question}
-                          <svg className="w-5 h-5 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <svg
+                            className="w-5 h-5 text-primary group-open:rotate-180 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
                           </svg>
                         </summary>
                         <div className="px-6 pb-6 text-gray-700 leading-relaxed">
@@ -858,24 +1009,46 @@ export default async function ProjectDetailPage({ params }: Props) {
                 {/* Introduction Section */}
                 <div className="prose max-w-none mx-auto">
                   <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                    Countless families in the Philippines have too little income to satisfy their hunger due to a lack of or only temporary employment opportunities. Those who are reasonably well off live mainly on dried fish and a handful of rice. Only those who own their own piece of land are able to supplement the meagre diet with some fruit and vegetables. Large families or those who have fallen into extreme poverty due to a stroke of fate are among those who have too little to be really full every day.
+                    Countless families in the Philippines have too little income
+                    to satisfy their hunger due to a lack of or only temporary
+                    employment opportunities. Those who are reasonably well off
+                    live mainly on dried fish and a handful of rice. Only those
+                    who own their own piece of land are able to supplement the
+                    meagre diet with some fruit and vegetables. Large families
+                    or those who have fallen into extreme poverty due to a
+                    stroke of fate are among those who have too little to be
+                    really full every day.
                   </p>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-12">
-                    The situation of these families is exacerbated by the current immense price increases for basic foodstuffs. Also in the area where the aid project MARIPHIL e.V. is active, many families suffer from poverty and hunger during the Christmas season!
+                    The situation of these families is exacerbated by the
+                    current immense price increases for basic foodstuffs. Also
+                    in the area where the aid project MARIPHIL e.V. is active,
+                    many families suffer from poverty and hunger during the
+                    Christmas season!
                   </p>
 
                   {/* A Hunger-Free Christmas Section */}
                   <div className="my-12">
                     <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight uppercase">
-                      <span className="text-yellow-500">A HUNGER-FREE CHRISTMAS</span>
+                      <span className="text-yellow-500">
+                        A HUNGER-FREE CHRISTMAS
+                      </span>
                       <br />
-                      <span className="text-gray-900">FOR FAMILIES IN NEED</span>
+                      <span className="text-gray-900">
+                        FOR FAMILIES IN NEED
+                      </span>
                     </h2>
                   </div>
 
                   <p className="text-gray-700 text-lg leading-relaxed mb-12">
-                    The "Rice Bag Campaign" was carried out for the first time in 2001 and with overwhelming success. For our partners in the project area, every Reissack campaign is a challenge in terms of logistics, accounting and management. A crowd of helpers is busy distributing the rice donations to needy families in the entire project area, documenting the distribution and then preparing an account for the campaign.
+                    The &ldquo;Rice Bag Campaign&rdquo; was carried out for the first time
+                    in 2001 and with overwhelming success. For our partners in
+                    the project area, every Reissack campaign is a challenge in
+                    terms of logistics, accounting and management. A crowd of
+                    helpers is busy distributing the rice donations to needy
+                    families in the entire project area, documenting the
+                    distribution and then preparing an account for the campaign.
                   </p>
                 </div>
 
@@ -899,25 +1072,40 @@ export default async function ProjectDetailPage({ params }: Props) {
 
                   <div className="text-left space-y-6">
                     <p className="text-gray-700 text-lg leading-relaxed">
-                      We want to make sure that families in need have enough rice so that they don't have to go hungry over Christmas. This year, MARIPHIL is once again handing over 1 sack of rice to destitute families in the Philippines. Sharply rising prices, especially for food, are causing problems for the weakest in particular. Many parents do not know how to feed their families adequately. Therefore, many people need special support again!
+                      We want to make sure that families in need have enough
+                      rice so that they don&apos;t have to go hungry over Christmas.
+                      This year, MARIPHIL is once again handing over 1 sack of
+                      rice to destitute families in the Philippines. Sharply
+                      rising prices, especially for food, are causing problems
+                      for the weakest in particular. Many parents do not know
+                      how to feed their families adequately. Therefore, many
+                      people need special support again!
                     </p>
 
                     <div className="my-8">
                       <h3 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-4">
-                        "A really meaningful Christmas present!"
+                        &ldquo;A really meaningful Christmas present!&rdquo;
                       </h3>
                     </div>
 
                     <p className="text-gray-700 text-lg leading-relaxed">
-                      With 40 euros* you can donate 1 bag (40 kg) of rice to a family in need. Whether individual or partial donations, every donation counts! Let's work together again to give as many families as possible a hunger-free Christmas!
+                      With 40 euros* you can donate 1 bag (40 kg) of rice to a
+                      family in need. Whether individual or partial donations,
+                      every donation counts! Let&apos;s work together again to give
+                      as many families as possible a hunger-free Christmas!
                     </p>
 
                     <p className="text-gray-600 text-base leading-relaxed italic">
-                      *Any surpluses (e.g. due to price or currency fluctuations) flow into our general project work (e.g. emergency fund).
+                      *Any surpluses (e.g. due to price or currency
+                      fluctuations) flow into our general project work (e.g.
+                      emergency fund).
                     </p>
 
                     <p className="text-gray-600 text-base leading-relaxed">
-                      <strong>Note on data protection:</strong> The transfer of your data to the Philippines is necessary for the thank you letter – if you do not want this, please note the note "no letter" when making the transfer.
+                      <strong>Note on data protection:</strong> The transfer of
+                      your data to the Philippines is necessary for the thank
+                      you letter – if you do not want this, please note the note
+                      &ldquo;no letter&rdquo; when making the transfer.
                     </p>
                   </div>
                 </div>
@@ -956,14 +1144,15 @@ export default async function ProjectDetailPage({ params }: Props) {
 
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-sm text-gray-600 leading-relaxed">
-                        Please be sure to enter your password and address so that we can send you a donation receipt!
+                        Please be sure to enter your password and address so
+                        that we can send you a donation receipt!
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             )}
-          
+
             {/* Impact Stats Section */}
             {project.slug === "mariphil-childrens-village" && (
               <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">

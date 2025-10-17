@@ -127,7 +127,7 @@ export default function NewsDetailPage({ params }: Props) {
               
               <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
-                  &quot;Sport free&quot; was the motto on October 4th at the MARIPHIL Children&apos;s Village. Under the motto &quot;celebration of strength and spirit&quot;, the sports festival began at 4:30 a.m. with Zumba as a warm-up. At 5:00 a.m., the participants ran about 3km around the Purok Takway and Purok Kamansi. The board of directors, employees of the office administration/social services, house mothers, interns of the social service and of course all the children of the children&apos;s village took part in the run. The run ended at 7:00 a.m. and for breakfast we had a delicious Arroz Caldo.
+                  &ldquo;Sport free&rdquo; was the motto on October 4th at the MARIPHIL Children&apos;s Village. Under the motto &ldquo;celebration of strength and spirit&rdquo;, the sports festival began at 4:30 a.m. with Zumba as a warm-up. At 5:00 a.m., the participants ran about 3km around the Purok Takway and Purok Kamansi. The board of directors, employees of the office administration/social services, house mothers, interns of the social service and of course all the children of the children&apos;s village took part in the run. The run ended at 7:00 a.m. and for breakfast we had a delicious Arroz Caldo.
                 </p>
 
                 <p>
@@ -149,7 +149,7 @@ export default function NewsDetailPage({ params }: Props) {
               
               <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
-                  In wonderful weather, the summer party of MARIPHIL took place again this year in beautiful Gutenstein. Friends and supporters of MARIPHIL came from many regions of Germany and even from Lichtenstein or Switzerland, Iserlohn or deepest Bavaria to exchange ideas and enjoy the delicious Asian delicacies with which our board member Isabel and her cooking team (Jane, Glenn, Jonavie and Carmen) spoiled the guests. Many days and nights of preparatory work were necessary here to roll all the spring rolls, cut the vegetables or prepare the dishes. The well-known Filipino food blogger "Bebs" with more than one million followers ("FoxyFolksy-Modern Filipino Kitchen"), had also come with her husband Armin to spend nice hours together with us and to actively participate in the food preparation.
+                  In wonderful weather, the summer party of MARIPHIL took place again this year in beautiful Gutenstein. Friends and supporters of MARIPHIL came from many regions of Germany and even from Lichtenstein or Switzerland, Iserlohn or deepest Bavaria to exchange ideas and enjoy the delicious Asian delicacies with which our board member Isabel and her cooking team (Jane, Glenn, Jonavie and Carmen) spoiled the guests. Many days and nights of preparatory work were necessary here to roll all the spring rolls, cut the vegetables or prepare the dishes. The well-known Filipino food blogger &ldquo;Bebs&rdquo; with more than one million followers (&ldquo;FoxyFolksy-Modern Filipino Kitchen&rdquo;), had also come with her husband Armin to spend nice hours together with us and to actively participate in the food preparation.
                 </p>
 
                 <p>
@@ -161,7 +161,7 @@ export default function NewsDetailPage({ params }: Props) {
                 </p>
 
                 <p>
-                  The proceeds from the event were able to flow 520 € into the "school bus" project, which is urgently needed locally
+                  The proceeds from the event were able to flow 520 € into the &ldquo;school bus&rdquo; project, which is urgently needed locally
                 </p>
               </div>
             </div>
