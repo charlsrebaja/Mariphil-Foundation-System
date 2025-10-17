@@ -209,7 +209,7 @@ export default function NewsDetailPage({ params }: Props) {
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tight">
-                Martin Riester's project trip to the Philippines
+                Martin Riester&apos;s project trip to the Philippines
               </h2>
               <p className="text-2xl text-primary font-semibold mb-8">April 4, 2025</p>
               
