@@ -95,10 +95,10 @@ export default function NewsDetailPage({ params }: Props) {
         <div className="absolute inset-0">
           <Image
             src={
-              slug === 'mariphil-celebrates-10-years'
-                ? 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600'
-                : slug === 'summer-festival-2025' || slug === 'mariphil-summer-festival-2025'
+              slug === 'summer-festival-2025'
                 ? '/images/news/Sommerfest 2025.jpg'
+                : slug === 'martin-riester-project-trip-philippines'
+                ? "/images/news/Martin Riester's project.png"
                 : article.coverImage || 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1600'
             }
             alt={article.title}
@@ -140,7 +140,7 @@ export default function NewsDetailPage({ params }: Props) {
       )}
 
       {/* Summer Festival 2025 Content */}
-      {(slug === 'summer-festival-2025' || slug === 'mariphil-summer-festival-2025') && (
+      {slug === 'summer-festival-2025' && (
         <section className="section-container">
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="card p-8 md:p-12">
@@ -203,8 +203,35 @@ export default function NewsDetailPage({ params }: Props) {
         </section>
       )}
 
+      {/* Martin Riester's Project Trip Content */}
+      {slug === 'martin-riester-project-trip-philippines' && (
+        <section className="section-container">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tight">
+                Martin Riester's project trip to the Philippines
+              </h2>
+              <p className="text-2xl text-primary font-semibold mb-8">April 4, 2025</p>
+              
+              <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+                On February 20, Mr. Martin Riester embarked on his first project trip to the Philippines. To read the report, please click on the image below.
+              </p>
+
+              <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/images/news/Martin Riester's project.png"
+                  alt="Martin Riester's project trip"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Default Content for Other Articles */}
-      {slug !== 'summer-festival-2025' && slug !== 'mariphil-summer-festival-2025' && slug !== 'sports-festival-childrens-village' && (
+      {slug !== 'summer-festival-2025' && slug !== 'sports-festival-childrens-village' && slug !== 'martin-riester-project-trip-philippines' && (
         <section className="section-container">
           <div className="max-w-4xl mx-auto">
             <article className="prose prose-lg max-w-none">

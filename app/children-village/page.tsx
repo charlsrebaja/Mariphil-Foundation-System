@@ -7,32 +7,35 @@ import { useState } from "react";
 export default function ChildrenVillagePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const scrollToGallery = () => {
+    const gallerySection = document.getElementById('gallery-section');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+      setIsDropdownOpen(false);
+    }
+  };
   
   // Gallery images organized by page
   const galleryPages: Record<number, string[]> = {
     1: [
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400",
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400",
-      "https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=400",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400",
+      "/images/Children's Village Gallery/Children's Village Gallery1.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery2.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery3.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery4.jpg",
     ],
     2: [
-      "https://images.unsplash.com/photo-1587691592099-24045742c181?w=400",
-      "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=400",
-      "https://images.unsplash.com/photo-1560785496-3c9d27877182?w=400",
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400",
+      "/images/Children's Village Gallery/Children's Village Gallery5.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery6.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery7.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery8.jpg",
     ],
     3: [
-      "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=400",
-      "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=400",
-      "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=400",
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400",
-    ],
-    4: [
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400",
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400",
-      "https://images.unsplash.com/photo-1503919005314-30d93d07d823?w=400",
-      "https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=400",
+      "/images/Children's Village Gallery/Children's Village Gallery9.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery10.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery1.jpg",
+      "/images/Children's Village Gallery/Children's Village Gallery2.jpg",
     ],
   };
 
@@ -52,14 +55,45 @@ export default function ChildrenVillagePage() {
           />
         </div>
 
-        <div className="absolute bottom-0 left-0 z-20 text-white px-6 md:px-12 lg:px-16 pb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Mariphil Children&apos;s Village
-          </h1>
-          <p className="text-xl max-w-2xl">
-            A loving home where children find safety, care, and opportunities to
-            thrive
-          </p>
+        <div className="absolute bottom-0 left-0 z-20 text-white px-6 md:px-12 lg:px-16 pb-12 w-full flex justify-between items-end">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Mariphil Children&apos;s Village
+            </h1>
+            <p className="text-xl max-w-2xl">
+              A loving home where children find safety, care, and opportunities to
+              thrive
+            </p>
+          </div>
+          
+          {/* Dropdown Menu */}
+          <div className="relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="bg-white/20 hover:bg-white/30 transition-colors px-4 py-2 rounded-lg flex items-center gap-2 text-white font-semibold backdrop-blur-sm"
+            >
+              Children&apos;s Village
+              <svg
+                className={`w-5 h-5 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </button>
+            
+            {isDropdownOpen && (
+              <div className="absolute bottom-full right-0 mb-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-30">
+                <button
+                  onClick={scrollToGallery}
+                  className="w-full text-left px-4 py-3 text-gray-900 hover:bg-primary hover:text-white transition-colors font-medium"
+                >
+                  Gallery
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -160,7 +194,7 @@ export default function ChildrenVillagePage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="section-container">
+      <section id="gallery-section" className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {currentImages.map((img, index) => (
             <div 
@@ -186,7 +220,7 @@ export default function ChildrenVillagePage() {
         
         {/* Pagination */}
         <div className="flex justify-center items-center gap-3 mt-8">
-          {[1, 2, 3, 4].map((page) => (
+          {[1, 2, 3].map((page) => (
             <button
               key={page}
               onClick={() => setCurrentPage(page)}

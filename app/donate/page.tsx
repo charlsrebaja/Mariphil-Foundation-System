@@ -1,30 +1,56 @@
+'use client';
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export const metadata: Metadata = {
-  title: 'Donate - Mariphil Foundation Inc.',
-  description: 'Support our mission by making a donation. Every contribution helps transform lives across the Philippines.',
-};
+// Note: Metadata cannot be exported from client components
+// SEO metadata should be set in layout.tsx or via generateMetadata function in parent
 
 export default function DonatePage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "How can I donate to the MARIPHIL Foundation?",
+      answer: "You can donate directly through our official bank account or via our online donation page. Once we receive your donation, we will issue a receipt which can be used for tax deduction purposes."
+    },
+    {
+      question: "Where does my donation go?",
+      answer: "Your donation directly supports our ongoing projects — including children's welfare programs, educational assistance, sustainable livelihood projects, and environmental initiatives."
+    },
+    {
+      question: "Can I volunteer with the MARIPHIL Foundation?",
+      answer: "Yes! We welcome volunteers who are passionate about helping others. You can fill out our volunteer application form on the \"Get Involved\" page or contact us directly for more details."
+    },
+    {
+      question: "Is MARIPHIL Foundation a registered organization?",
+      answer: "Yes, MARIPHIL Foundation is a legally registered non-profit organization in the Philippines, recognized for its transparency and commitment to community development."
+    }
+  ];
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[500px] flex items-end overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600"
+            src="/images/Children's Village Gallery/Children's Village Gallery6.jpg"
             alt="Make a Difference"
             fill
             className="object-cover"
           />
         </div>
         
-        <div className="relative z-20 text-center text-white section-container">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Make a Difference</h1>
-          <p className="text-xl max-w-2xl mx-auto">
+        <div className="relative z-20 text-white px-6 md:px-12 lg:px-16 pb-12 max-w-4xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">DONATE NOW</h1>
+          <p className="text-xl max-w-2xl">
             Your donation helps us provide education, healthcare, and hope to children and families in need
           </p>
         </div>
@@ -63,7 +89,7 @@ export default function DonatePage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
-              OUR DONATION ACCOUNT
+              <span className="text-primary">&ldquo;</span>OUR DONATION ACCOUNT<span className="text-primary">&rdquo;</span>
             </h2>
           </div>
 
@@ -140,6 +166,50 @@ export default function DonatePage() {
             <p className="text-xl font-semibold text-green-800 mt-8">
               Please feel free to contact us!
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-white section-container">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                    {faq.question}
+                  </h3>
+                  <svg
+                    className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </button>
+                
+                {openIndex === index && (
+                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 animate-in fade-in">
+                    <p className="text-gray-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

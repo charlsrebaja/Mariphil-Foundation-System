@@ -87,7 +87,11 @@ export default async function Home() {
                       {project.summary}
                     </p>
                     <Link
-                      href={`/projects/${project.slug}`}
+                      href={
+                        project.slug === 'mariphil-childrens-village'
+                          ? '/children-village'
+                          : `/projects/${project.slug}`
+                      }
                       className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                     >
                       Learn More

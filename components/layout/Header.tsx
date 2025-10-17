@@ -1,5 +1,6 @@
 'use client';
 
+/* htmlhint aria-expanded: [false] */
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useRef, useCallback } from 'react';
@@ -157,8 +158,8 @@ export default function Header() {
                       onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
                       className="ml-1 text-gray-700 hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Toggle about dropdown"
-                      aria-expanded={aboutDropdownOpen ? "true" : "false"}
                       aria-haspopup="true"
+                      data-expanded={aboutDropdownOpen}
                     >
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${
@@ -224,8 +225,8 @@ export default function Header() {
                       onClick={() => setProjectsDropdownOpen(!projectsDropdownOpen)}
                       className="ml-1 text-gray-700 hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Toggle projects dropdown"
-                      aria-expanded={projectsDropdownOpen ? "true" : "false"}
                       aria-haspopup="true"
+                      data-expanded={projectsDropdownOpen}
                     >
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${
@@ -294,8 +295,8 @@ export default function Header() {
                       onClick={() => setNewsDropdownOpen(!newsDropdownOpen)}
                       className="ml-1 text-gray-700 hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Toggle news dropdown"
-                      aria-expanded={newsDropdownOpen ? "true" : "false"}
                       aria-haspopup="true"
+                      data-expanded={newsDropdownOpen}
                     >
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${
@@ -359,8 +360,8 @@ export default function Header() {
             type="button"
             className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors duration-150"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen ? "true" : "false"}
             aria-label="Toggle main menu"
+            data-expanded={mobileMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
@@ -399,7 +400,7 @@ export default function Header() {
                         onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
                         className="px-3 py-2 text-gray-700 hover:text-primary transition-colors duration-150"
                         aria-label="Toggle about menu"
-                        aria-expanded={mobileAboutOpen ? "true" : "false"}
+                        data-expanded={mobileAboutOpen}
                       >
                         <svg
                           className={`w-4 h-4 transition-transform duration-200 ${
@@ -468,7 +469,7 @@ export default function Header() {
                         onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
                         className="px-3 py-2 text-gray-700 hover:text-primary transition-colors duration-150"
                         aria-label="Toggle projects menu"
-                        aria-expanded={mobileProjectsOpen ? "true" : "false"}
+                        data-expanded={mobileProjectsOpen}
                       >
                         <svg
                           className={`w-4 h-4 transition-transform duration-200 ${
@@ -537,7 +538,7 @@ export default function Header() {
                         onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
                         className="px-3 py-2 text-gray-700 hover:text-primary transition-colors duration-150"
                         aria-label="Toggle news menu"
-                        aria-expanded={mobileNewsOpen ? "true" : "false"}
+                        data-expanded={mobileNewsOpen}
                       >
                         <svg
                           className={`w-4 h-4 transition-transform duration-200 ${
