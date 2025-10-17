@@ -373,7 +373,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     </div>
 
                     {/* Right Column - Donation Account */}
-                    <div className="rounded-2xl shadow-xl p-6 border-2 border-orange-200" style={{ backgroundColor: '#fad20a' }}>
+                    <div className="rounded-2xl shadow-xl p-6 border-2 border-orange-200 bg-[#fad20a]">
                       <div className="flex flex-col items-center mb-4">
                         {/* Down Arrow Icon */}
                         <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-4">
@@ -773,7 +773,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </div>
 
                 {/* Donation Account Section */}
-                <div className="rounded-2xl shadow-xl p-8 border-2 border-orange-200 max-w-2xl mx-auto" style={{ backgroundColor: '#fad20a' }}>
+                <div className="rounded-2xl shadow-xl p-8 border-2 border-orange-200 max-w-2xl mx-auto bg-[#fad20a]">
                   <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
                     Our donation account in PHILIPPINES
                   </h3>
@@ -923,7 +923,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </div>
 
                 {/* Donation Account Section */}
-                <div className="rounded-2xl shadow-xl p-8 border-2 border-orange-200 max-w-2xl mx-auto" style={{ backgroundColor: '#fad20a' }}>
+                <div className="rounded-2xl shadow-xl p-8 border-2 border-orange-200 max-w-2xl mx-auto bg-[#fad20a]">
                   <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
                     Our donation account
                   </h3>

@@ -153,10 +153,11 @@ export default function Header() {
                       {item.name}
                     </Link>
                     <button
+                      type="button"
                       onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
                       className="ml-1 text-gray-700 hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Toggle about dropdown"
-                      aria-expanded={aboutDropdownOpen}
+                      aria-expanded={aboutDropdownOpen ? "true" : "false"}
                       aria-haspopup="true"
                     >
                       <svg
@@ -219,10 +220,11 @@ export default function Header() {
                       {item.name}
                     </Link>
                     <button
+                      type="button"
                       onClick={() => setProjectsDropdownOpen(!projectsDropdownOpen)}
                       className="ml-1 text-gray-700 hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Toggle projects dropdown"
-                      aria-expanded={projectsDropdownOpen}
+                      aria-expanded={projectsDropdownOpen ? "true" : "false"}
                       aria-haspopup="true"
                     >
                       <svg
@@ -288,10 +290,11 @@ export default function Header() {
                       {item.name}
                     </Link>
                     <button
+                      type="button"
                       onClick={() => setNewsDropdownOpen(!newsDropdownOpen)}
                       className="ml-1 text-gray-700 hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Toggle news dropdown"
-                      aria-expanded={newsDropdownOpen}
+                      aria-expanded={newsDropdownOpen ? "true" : "false"}
                       aria-haspopup="true"
                     >
                       <svg
@@ -356,7 +359,7 @@ export default function Header() {
             type="button"
             className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors duration-150"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
+            aria-expanded={mobileMenuOpen ? "true" : "false"}
             aria-label="Toggle main menu"
           >
             <span className="sr-only">Open main menu</span>
@@ -392,10 +395,11 @@ export default function Header() {
                         {item.name}
                       </Link>
                       <button
+                        type="button"
                         onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
                         className="px-3 py-2 text-gray-700 hover:text-primary transition-colors duration-150"
                         aria-label="Toggle about menu"
-                        aria-expanded={mobileAboutOpen}
+                        aria-expanded={mobileAboutOpen ? "true" : "false"}
                       >
                         <svg
                           className={`w-4 h-4 transition-transform duration-200 ${
@@ -460,10 +464,11 @@ export default function Header() {
                         {item.name}
                       </Link>
                       <button
+                        type="button"
                         onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
                         className="px-3 py-2 text-gray-700 hover:text-primary transition-colors duration-150"
                         aria-label="Toggle projects menu"
-                        aria-expanded={mobileProjectsOpen}
+                        aria-expanded={mobileProjectsOpen ? "true" : "false"}
                       >
                         <svg
                           className={`w-4 h-4 transition-transform duration-200 ${
@@ -528,10 +533,11 @@ export default function Header() {
                         {item.name}
                       </Link>
                       <button
+                        type="button"
                         onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
                         className="px-3 py-2 text-gray-700 hover:text-primary transition-colors duration-150"
                         aria-label="Toggle news menu"
-                        aria-expanded={mobileNewsOpen}
+                        aria-expanded={mobileNewsOpen ? "true" : "false"}
                       >
                         <svg
                           className={`w-4 h-4 transition-transform duration-200 ${
